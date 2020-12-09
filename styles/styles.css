@@ -1,0 +1,104 @@
+/*******************
+  YT PLAYLIST
+*******************/
+#yt-playlist-module {
+  border: 2px solid #fff;
+  display: flex;
+}
+#yt-playlist-module .player-container {
+  background: #171717;
+  border-right: 2px solid #fff;
+  width: 75%;
+}
+#yt-playlist-module .video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio*/
+  height: 0;
+}
+#yt-playlist-module .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#yt-playlist-module .playlist-container {
+  background: #222;
+  overflow-y: scroll;
+  width: 25%;
+}
+#yt-playlist-module .playlist-container ul {
+  height: calc(100% + 2px);
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+#yt-playlist-module .playlist-container .playlist-item {
+  background: #171717;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  height: calc(100% / 8);
+  position: relative;
+  transition: color 0.3s, background 0.3s, border-bottom-color 0.3s;
+}
+#yt-playlist-module .playlist-container .playlist-item:hover {
+  background: #fff;
+  border-bottom-color: #888;
+  color: #171717;
+}
+#yt-playlist-module .playlist-container .playlist-item p {
+  align-self: center;
+  color: inherit;
+  margin: 0;
+  padding: 10px 5px;
+  text-align: center;
+  transition: color 0.3s;
+  width: 100%;
+}
+#yt-playlist-module .playlist-container .playlist-item.active {
+  cursor: default;
+  background: #fff;
+  border-bottom-color: #888;
+  color: #171717;
+}
+
+@media (max-width: 1199px) {
+  #yt-playlist-module .playlist-container .playlist-item {
+    height: calc(100% / 7);
+  }
+  #yt-playlist-module .playlist-container .playlist-item p {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  #yt-playlist-module .playlist-container .playlist-item {
+    height: calc(100% / 6);
+  }
+  #yt-playlist-module .playlist-container .playlist-item p {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #yt-playlist-module {
+    border: none;
+    flex-direction: column;
+    max-height: unset;
+  }
+  #yt-playlist-module .player-container {
+    border: 2px solid #fff;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  #yt-playlist-module .playlist-container {
+    border: 2px solid #fff;
+    max-height: 288px;
+    width: 100%;
+  }
+  #yt-playlist-module .playlist-container .playlist-item {
+    height: calc(100% / 5);
+  }
+}

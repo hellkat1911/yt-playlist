@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Playlist demo</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/main.js" defer></script>
+    <style>
+      html {
+        background: #222;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+        font-size: 10px;
+        height: 100%;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+      body {
+        font-size: 1.5rem;
+        height: 100%;
+        margin: 0;
+        padding: 30px;
+      }
+      .container {
+        max-width: 100%;
+        width: 1200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="yt-playlist-module">
+        <div class="player-container">
+          <div class="video-container">
+            <iframe
+              width="560"
+              height="315"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="playlist-container">
+          <ul>
+            <!-- playlist appended here -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
